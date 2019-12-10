@@ -1,0 +1,75 @@
+.exps {
+    height: 100vh;
+    background-image: 
+    linear-gradient(to right bottom, 
+    rgba($color-black, .9), 
+    rgba($color-gray, .8)),
+    url('../img/young-man-stood-in-front-of-light.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+&__desc {
+    // width: 400px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+
+    @media screen and (max-width: 600px) {
+        & {
+            width: 95%;
+        }
+    }
+}
+    &__hdng {
+        
+    }
+
+}
+
+#tour2 {
+background-image: 
+linear-gradient(to right bottom, 
+rgba($color-black, .9), 
+rgba($color-gray, .8)),
+url('../img/kb-home-hero2.jpg');
+background-size: cover;
+background-position: center;
+}
+
+#tour3 {
+background-image: 
+linear-gradient(to right bottom, 
+rgba(144, 86, 86, .9), 
+rgba(8, 0, 5, .8)),
+url('../img/bradley-dunn-1582437-unsplash.jpg');
+background-size: cover;
+background-position: center;
+}
+
+#tour4 {
+background-image: 
+linear-gradient(to right bottom, 
+rgba(#00bbe6, .9), 
+rgba(#8d8177, .8)),
+url('../img/noaa-a7T0PQol-6E-unsplash.jpg');
+background-size: cover;
+background-position: center;
+}
+
+#tour5 {
+background-image: 
+linear-gradient(to right bottom, 
+rgba(#e69d00, .5), 
+rgba(#778d77, .8)),
+url('../img/martin-schmidli-mGy1Jjr2e6M-unsplash.jpg');
+background-size: cover;
+background-position: center;
+}
+
+// #16778d
+// #f9cca4
+
+

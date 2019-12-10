@@ -1,0 +1,25 @@
+.btnTake:link, .btnTake:visited {
+    text-transform:lowercase;
+    padding:10px 20px;
+    text-decoration:none;
+    display:inline-block;
+    font-size:20px;
+    color: $color-white;
+    font-family: "Quicksand", sans-serif;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    background-color: $color-light-black;
+    cursor: pointer;
+    border: 1px solid $color-white;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black, 0.9);
+    }
+
+    &:active {
+        transform: translateY(3px);
+        box-shadow:0 5px 10px rgba($color-black, 0.7);
+    }
+
+}

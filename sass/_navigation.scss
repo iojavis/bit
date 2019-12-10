@@ -1,0 +1,148 @@
+.navigation {
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #635c5c;
+        box-shadow: 0 10px 20px rgba($color-black, .9);
+        position: fixed;
+        top: 60px;
+        right: 60px;
+        z-index: 2000;
+        transition: all .2s;
+
+        @media screen and (max-width: 600px) {
+             & {
+                width: 35px;
+                height: 35px; 
+                top: 3%;
+                right: 10%;
+
+             }
+        }
+
+        &:hover {
+            box-shadow: 0 20px 30px rgba($color-black, .9);
+        }
+
+        @media screen and (max-width: 600px) {
+            &__button {
+                width: 40px;
+                height: 40px;
+                top: 20px;
+            }
+            #iconMenu {
+                font-size: 50px;
+                top: 8px;
+                left: 15px;
+                color: $color-white;
+
+            }
+            &__background {
+                width: 30px;
+                height: 30px;
+                top: 30px;
+                right: 30px;
+            }
+        }
+
+
+    }
+
+    #iconMenu {
+        position: absolute;
+        font-size: 50px;
+        top: 7px;
+        left: 15px;
+
+        @media screen and (max-width: 600px)  {
+            font-size: 30px;
+            top: 2px;
+            left: 5px;
+        }
+
+    }
+
+    &__background {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: fixed;
+        top: 65px;
+        right: 65px;
+        background-image: radial-gradient($color-black, $color-light-black);
+        z-index: 1000;
+        transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        // transform: scale(80);
+
+        @media screen and (max-width: 600px) {
+            & {
+                width: 20px;
+                height: 20px;
+                top: 20px;
+                right: 40px;
+            }
+        }
+
+    }
+    &__nav {
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 1500;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__list {
+        @include centerMiddle;
+        text-align: center;
+        list-style: none;
+
+        z-index: 1000;
+    }
+
+    &__item {
+        
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+
+    &__link {
+        &:link, &:visited{
+            text-decoration: none;
+            font-size: 30px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            color: $color-white;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 230%;
+            transition: all .4s;
+        }
+
+        &:hover, &:active {
+            background-position: 100%;
+            color: $color-light-black;
+
+        }
+        
+
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+
+    }
+
+
+}

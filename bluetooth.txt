@@ -1,0 +1,3 @@
+1417  lsmod | grep blue
+ 1418  systemctl enable bluetooth.service
+ 1419  systemctl start bluetooth.service
